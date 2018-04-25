@@ -8,7 +8,9 @@ require 'pry'
 require 'yq'
 
 
-LOGGER = Logger.new('/dev/null')
+LOGGER = Logger.new('/dev/stderr')
+LOGGER.level = Logger::DEBUG
+
 SPEC_ROOT = File.expand_path(File.dirname(__FILE__))
 WORK_ROOT = File.expand_path(File.join(SPEC_ROOT, '..'))
 
