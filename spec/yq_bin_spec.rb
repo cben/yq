@@ -64,7 +64,8 @@ foo:
 EOF
 
     it '.foo.bar' do
-      out_err, status = run_bin('.foo.bar', yaml)
+      out_err, status = run_bin('--develop .foo.bar', yaml)
+      p out_err, status
       expect(out_err).to match('baz: value')
       expect(status).to be_success
     end

@@ -19,6 +19,7 @@ module Yq
     req_json = yaml_to_json(yaml)
     resp_json = search(query, req_json)
     resp_yaml = json_to_yaml(resp_json)
+    p req_json, resp_json, resp_yaml
     return resp_yaml
   end
 

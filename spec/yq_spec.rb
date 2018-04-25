@@ -22,11 +22,11 @@ EOF
 {"foo":{"bar":{"'":"value"}}}
 EOF
 
-  let(:jq_query) { %q({"\\t": .foo.bar["'"]}) }
+  let(:jq_query) { %q({"*": .foo.bar["'"]}) }
 
   let(:jq_response) {<<EOF}
 {
-  "\\t": "value"
+  "*": "value"
 }
 EOF
 
